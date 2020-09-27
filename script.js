@@ -11,7 +11,7 @@ $(document).ready(function () {
 // This code uses a for loop to run through all of the time blocks, taking the description class to reach the value of it
 // Then it compares times and depending on the time it will add classes already written in style.css
   for (i = 0; i < timeValue.length; i++) {
-    var hour = timeValue[i].getAttribute("value");
+    var hour = parseInt(timeValue[i].getAttribute("value"));
     if (hour == currentTime) {
       timeValue[i].classList.add("present");
     } else if (hour < currentTime) {
